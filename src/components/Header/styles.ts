@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+  font-family: 'Roboto';
   max-width: 1500px;
   margin: 0 auto;
   display: flex;
@@ -22,6 +23,7 @@ export const HeaderInfo = styled.div`
   color: ${(props) => props.theme["purple-dark"]};
   padding: 10px;
   border-radius: 8px;
+  font-size: 0.875rem;
   }
 
   a {
