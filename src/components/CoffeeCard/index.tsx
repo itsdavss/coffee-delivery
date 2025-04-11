@@ -1,6 +1,6 @@
 import { ShoppingCart } from "phosphor-react";
 import { BuyArea, Card, Info, Tipo } from "./styles";
-import Tradicional from '../../assets/images/tradicional.png'
+import Tradicional from '../../assets/images/expresso-tradicional.png'
 
 export function CoffeeCard() {
   return (
