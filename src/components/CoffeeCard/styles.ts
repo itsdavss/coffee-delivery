@@ -23,13 +23,16 @@ export const Card = styled.li`
 
 export const Tipo = styled.div`
   font-family: "Roboto", sans-serif;
-  background-color: ${(props) => props.theme["yellow-light"]};
-  border-radius: 9999px;
-  padding: 4px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 
   p {
+    border-radius: 9999px;
+    padding: 4px 8px;
+    background-color: ${(props) => props.theme["yellow-light"]};
     color: ${(props) => props.theme["yellow-dark"]};
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 700;
   }
 `;
