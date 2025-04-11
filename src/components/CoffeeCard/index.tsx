@@ -1,16 +1,12 @@
 import { ShoppingCart } from "phosphor-react";
 import { BuyArea, Card, Info, Tipo } from "./styles";
 
-interface CoffeeTag {
-  type: string
-}
-
 interface CoffeeCardProps{
   name: string,
   image: string,
   description: string,
   value: number,
-  types: CoffeeTag[]
+  types: string[]
 }
 
 export function CoffeeCard({ name, image, description, value, types }: CoffeeCardProps) {
@@ -18,9 +14,9 @@ export function CoffeeCard({ name, image, description, value, types }: CoffeeCar
     <Card>
       <img src={image} alt="Imagem café" />
       <Tipo>
-        {types.map((type: CoffeeTag, index)=>{
+        {types.map((type, index)=>{
           return (
-          <p key={index}>{type.type}</p>
+          <p key={index}>{type}</p>
         )
         })}
       </Tipo>
