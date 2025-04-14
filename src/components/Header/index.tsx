@@ -6,11 +6,18 @@ export function Header() {
   return (
     <HeaderContainer>
       <div>
-        <img src={Logo} alt="Logo Coffee Devilery" />
+        <a href="/">
+          <img src={Logo} alt="Logo Coffee Devilery" />
+        </a>
       </div>
       <HeaderInfo>
-        <div><MapPin size={22} />São Paulo, SP</div>
-        <a href="/checkout"><ShoppingCart size={22} /></a>
+        <div>
+          <MapPin size={22} />
+          São Paulo, SP
+        </div>
+        <a href="/checkout">
+          <ShoppingCart size={22} />
+        </a>
       </HeaderInfo>
     </HeaderContainer>
   );
