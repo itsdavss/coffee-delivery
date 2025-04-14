@@ -93,3 +93,29 @@ export const PaymentInfo = styled(BaseInfo)`
     color: ${(props) => props.theme["purple"]};
   }
 `;
+
+export const PaymentInputs = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+    cursor: pointer;
+    background-color: ${(props) => props.theme["base-button"]};
+    color: ${(props) => props.theme["base-text"]};
+    padding: 16px;
+    width: 25%;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-family: "Roboto", sans-serif;
+
+    svg {
+      color: ${(props) => props.theme["purple"]};
+    }
+  }
+`;

@@ -1,5 +1,12 @@
-import { CurrencyDollar, MapPinLine } from "phosphor-react";
-import { ContainerSection, Form, FormInfo, FormInputs, PaymentInfo } from "./styles";
+import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
+import {
+  ContainerSection,
+  Form,
+  FormInfo,
+  FormInputs,
+  PaymentInfo,
+  PaymentInputs,
+} from "./styles";
 
 export default function CompleteOrder() {
   return (
@@ -18,7 +25,11 @@ export default function CompleteOrder() {
             <input type="text" placeholder="CEP" className="tamanho30" />
             <input type="text" placeholder="Rua" className="tamanho100" />
             <input type="text" placeholder="Número" className="tamanho30" />
-            <input type="text" placeholder="Complemento" className="tamanho63" />
+            <input
+              type="text"
+              placeholder="Complemento"
+              className="tamanho63"
+            />
             <input type="text" placeholder="Bairro" className="tamanho30" />
             <input type="text" placeholder="Cidade" className="tamanho48" />
             <input type="text" placeholder="UF" className="tamanho10" />
@@ -26,12 +37,40 @@ export default function CompleteOrder() {
         </section>
         <section>
           <PaymentInfo>
-          <CurrencyDollar size={22} />
+            <CurrencyDollar size={22} />
             <div>
               <h3>Pagamento</h3>
-              <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
+              <p>
+                O pagamento é feito na entrega. Escolha a forma que deseja pagar
+              </p>
             </div>
           </PaymentInfo>
+          <PaymentInputs>
+            <input
+              type="radio"
+              name="pagamento"
+              id="credito"
+              value="cartao_credito"
+              hidden
+            />
+            <label htmlFor="credito"><CreditCard size={22} /> CARTÃO DE CRÉDITO</label>
+            <input
+              type="radio"
+              name="pagamento"
+              id="credito"
+              value="cartao_credito"
+              hidden
+            />
+            <label htmlFor="credito"><Bank size={22} /> CARTÃO DE DÉBITO</label>
+            <input
+              type="radio"
+              name="pagamento"
+              id="credito"
+              value="cartao_credito"
+              hidden
+            />
+            <label htmlFor="credito"><Money size={22} /> DINHEIRO</label>
+          </PaymentInputs>
         </section>
       </Form>
     </ContainerSection>
