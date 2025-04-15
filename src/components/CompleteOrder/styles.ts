@@ -113,9 +113,16 @@ export const PaymentInputs = styled.div`
     border-radius: 8px;
     font-size: 0.75rem;
     font-family: "Roboto", sans-serif;
+    border: 1px solid ${(props) => props.theme["base-button"]};
 
     svg {
       color: ${(props) => props.theme["purple"]};
     }
+  }
+
+  input[type='radio']:checked + label {
+    border:1px solid  ${(props) => props.theme["purple"]};
+    background-color: ${(props) => props.theme["purple-light"]};
+    color: ${(props) => props.theme["purple"]};
   }
 `;

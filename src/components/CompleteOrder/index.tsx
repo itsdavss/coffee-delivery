@@ -57,19 +57,19 @@ export default function CompleteOrder() {
             <input
               type="radio"
               name="pagamento"
-              id="credito"
-              value="cartao_credito"
+              id="debito"
+              value="cartao_debito"
               hidden
             />
-            <label htmlFor="credito"><Bank size={22} /> CARTÃO DE DÉBITO</label>
+            <label htmlFor="debito"><Bank size={22} /> CARTÃO DE DÉBITO</label>
             <input
               type="radio"
               name="pagamento"
-              id="credito"
-              value="cartao_credito"
+              id="dinheiro"
+              value="dinheiro"
               hidden
             />
-            <label htmlFor="credito"><Money size={22} /> DINHEIRO</label>
+            <label htmlFor="dinheiro"><Money size={22} /> DINHEIRO</label>
           </PaymentInputs>
         </section>
       </Form>
