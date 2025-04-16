@@ -1,4 +1,4 @@
-import { CartCard, CartItems, CartItem, CartSection } from "./styles";
+import { CartCard, CartItems, CartItem, CartSection, OrderSummary, ConfirmButton } from "./styles";
 import tradicional from "../../assets/images/expresso-tradicional.png";
 import { Trash } from "phosphor-react";
 
@@ -20,7 +20,7 @@ export default function () {
             <h4>R$ 9,90</h4>
           </CartItem>
         </CartItems>
-        <div>
+        <OrderSummary>
           <div>
             <p>Total de itens</p>
             <p>R$ 29,70</p>
@@ -33,8 +33,8 @@ export default function () {
             <h3>Total</h3>
             <h3>R$ 33,20</h3>
           </div>
-        </div>
-        <button>CONFIRMAR PEDIDO</button>
+        </OrderSummary>
+        <ConfirmButton>CONFIRMAR PEDIDO</ConfirmButton>
       </CartCard>
     </CartSection>
   );

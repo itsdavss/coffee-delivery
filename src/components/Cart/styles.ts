@@ -11,6 +11,10 @@ export const CartSection = styled.section`
     font-size: 1.125rem;
     margin-bottom: 15px;
   }
+
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 export const CartCard = styled.section`
@@ -20,6 +24,11 @@ export const CartCard = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1024px) {
+   padding: 30px;
+   margin-bottom: 5%;
+  }
 `;
 
 export const CartItems = styled.div`
@@ -64,4 +73,54 @@ export const CartItem = styled.div`
     color: ${(props) => props.theme["base-text"]};
     margin-left: 21%;
   }
-`
+
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+
+    img {
+      margin-right: 0px;
+    }
+
+    h4 {
+      margin-left: 0px;
+    }
+  }
+`;
+
+export const OrderSummary = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+    color: ${(props) => props.theme["base-text"]};
+    }
+
+    h3 {
+      color: ${(props) => props.theme["base-subtitle"]};
+      font-size: 1.25rem;
+    }
+  }
+`;
+
+export const ConfirmButton = styled.button`
+    background-color: ${(props) => props.theme["yellow"]};
+    color: ${(props) => props.theme["white"]};
+    width: 100%;
+    padding: 16px 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-top: 24px;
+
+    &:hover {
+    background-color: ${(props) => props.theme["yellow-dark"]};
+  }
+`;

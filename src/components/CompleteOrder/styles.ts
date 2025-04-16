@@ -11,6 +11,10 @@ export const ContainerSection = styled.section`
     font-size: 1.125rem;
     margin-bottom: 15px;
   }
+
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 export const Form = styled.form`
@@ -60,6 +64,13 @@ export const FormInputs = styled.div`
 
   input.tamanho10 {
     width: 5%; 
+  }
+
+  @media (max-width: 1024px) {
+
+    input {
+      width: 100% !important; 
+    }
   }
 `;
 
@@ -124,5 +135,14 @@ export const PaymentInputs = styled.div`
     border:1px solid  ${(props) => props.theme["purple"]};
     background-color: ${(props) => props.theme["purple-light"]};
     color: ${(props) => props.theme["purple"]};
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 12px;
+
+    label {
+      width: 60%;
+    }
   }
 `;
