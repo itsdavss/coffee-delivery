@@ -18,6 +18,15 @@ export const Title = styled.div`
         font-size: 2rem;
         color: ${(props) => props.theme["base-title"]};
       }
+
+      @media (max-width: 1024px) {
+        margin-top: 30px;
+
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
 `;
 
 export const CoffeeList = styled.ul`

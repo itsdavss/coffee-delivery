@@ -93,7 +93,16 @@ export const TextArea = styled.div`
     margin: 0 auto;
 
   >div {
+    margin-top: 20px;
     text-align: center;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+  }
+
+  > ul {
+    margin-top: 30px;
   }
   }
 
