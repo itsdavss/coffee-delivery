@@ -5,7 +5,7 @@ export const Section = styled.section`
   background-image: url(${Background});
 
   > div {
-    max-width: 1500px;
+    max-width: 1350px;
     margin: 0 auto;
     display: flex;
     justify-content: center;

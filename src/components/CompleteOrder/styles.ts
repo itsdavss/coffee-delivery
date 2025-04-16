@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerSection = styled.section`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 58%;
 
   h1 {
     color: ${(props) => props.theme["base-subtitle"]};
@@ -47,19 +47,19 @@ export const FormInputs = styled.div`
   }
 
   input.tamanho63 {
-    width: 63%; 
+    width: 57%; 
   }
 
   input.tamanho48 {
-    width: 48%; 
+    width: 47%; 
   }
 
   input.tamanho30 {
-    width: 30%; 
+    width: 35%; 
   }
 
   input.tamanho10 {
-    width: 10%; 
+    width: 5%; 
   }
 `;
 

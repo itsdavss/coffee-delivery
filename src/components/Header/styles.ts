@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   font-family: 'Roboto', sans-serif;
-  max-width: 1500px;
+  max-width: 1120px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

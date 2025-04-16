@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-    max-width: 1500px;
+  max-width: 1120px;
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -24,7 +24,7 @@ export const CoffeeList = styled.ul`
   padding-top: 30px;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 `
