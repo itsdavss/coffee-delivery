@@ -1,8 +1,11 @@
 import { CartCard, CartItems, CartItem, CartSection, OrderSummary, ConfirmButton } from "./styles";
 import tradicional from "../../assets/images/expresso-tradicional.png";
 import { Trash } from "phosphor-react";
+import { useNavigate } from "react-router-dom";
 
 export default function () {
+  const navigate = useNavigate()
+
   return (
     <CartSection>
       <h2>Cafés selecionados</h2>
@@ -34,7 +37,7 @@ export default function () {
             <h3>R$ 33,20</h3>
           </div>
         </OrderSummary>
-        <ConfirmButton>CONFIRMAR PEDIDO</ConfirmButton>
+        <ConfirmButton onClick={()=> {navigate('/success')}}>CONFIRMAR PEDIDO</ConfirmButton>
       </CartCard>
     </CartSection>
   );
