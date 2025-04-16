@@ -33,7 +33,7 @@ export default function Success() {
             <CurrencyDollar size={16} className="dollar" />
             <div>
               <p>Pagamento na entrega</p>
-              <p>Cartão de crédito</p>
+              <p><strong>Cartão de crédito</strong></p>
             </div>
           </Information>
         </InfoBox>
