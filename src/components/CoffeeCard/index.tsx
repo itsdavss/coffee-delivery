@@ -1,23 +1,28 @@
 import { ShoppingCart } from "phosphor-react";
-import { BuyArea, Card, Info, Tipo } from "./styles";
+import { BuyArea, BuyButton, Card, Info, Tipo } from "./styles";
+import SetQuantityButton from "../../utils/setQuantityButton";
 
-interface CoffeeCardProps{
-  name: string,
-  image: string,
-  description: string,
-  value: number,
-  types: string[]
+interface CoffeeCardProps {
+  name: string;
+  image: string;
+  description: string;
+  value: number;
+  types: string[];
 }
 
-export function CoffeeCard({ name, image, description, value, types }: CoffeeCardProps) {
+export function CoffeeCard({
+  name,
+  image,
+  description,
+  value,
+  types,
+}: CoffeeCardProps) {
   return (
     <Card>
       <img src={image} alt="Imagem café" />
       <Tipo>
-        {types.map((type, index)=>{
-          return (
-          <p key={index}>{type}</p>
-        )
+        {types.map((type, index) => {
+          return <p key={index}>{type}</p>;
         })}
       </Tipo>
       <Info>
@@ -26,12 +31,12 @@ export function CoffeeCard({ name, image, description, value, types }: CoffeeCar
       </Info>
       <BuyArea>
         <h4>
-          R$ <span>{value}</span>
+          R$ <span>{value.toFixed(2).replace(".", ",")}</span>
         </h4>
-        <p>1</p>
-        <button>
+        <SetQuantityButton />
+        <BuyButton>
           <ShoppingCart size={22} />
-        </button>
+        </BuyButton>
       </BuyArea>
     </Card>
   );

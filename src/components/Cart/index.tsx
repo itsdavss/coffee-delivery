@@ -1,10 +1,20 @@
-import { CartCard, CartItems, CartItem, CartSection, OrderSummary, ConfirmButton } from "./styles";
+import {
+  CartCard,
+  CartItems,
+  CartItem,
+  CartSection,
+  OrderSummary,
+  ConfirmButton,
+  Buttons,
+  RemoveButton,
+} from "./styles";
 import tradicional from "../../assets/images/expresso-tradicional.png";
 import { Trash } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
+import SetQuantityButton from "../../utils/setQuantityButton";
 
 export default function () {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <CartSection>
@@ -13,13 +23,16 @@ export default function () {
         <CartItems>
           <CartItem>
             <img src={tradicional} alt="" />
-            <div>
+            <Buttons>
               <p>Expresso Tradicional</p>
-              <button>
-                <Trash />
-                Remover
-              </button>
-            </div>
+              <div>
+                <SetQuantityButton />
+                <RemoveButton>
+                  <Trash />
+                  Remover
+                </RemoveButton>
+              </div>
+            </Buttons>
             <h4>R$ 9,90</h4>
           </CartItem>
         </CartItems>
@@ -37,7 +50,13 @@ export default function () {
             <h3>R$ 33,20</h3>
           </div>
         </OrderSummary>
-        <ConfirmButton onClick={()=> {navigate('/success')}}>CONFIRMAR PEDIDO</ConfirmButton>
+        <ConfirmButton
+          onClick={() => {
+            navigate("/success");
+          }}
+        >
+          CONFIRMAR PEDIDO
+        </ConfirmButton>
       </CartCard>
     </CartSection>
   );

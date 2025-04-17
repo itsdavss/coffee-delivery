@@ -74,16 +74,20 @@ export const BuyArea = styled.div`
       font-size: 1.25rem;
     }
   }
+`;
 
-  button {
+export const BuyButton = styled.button`
+
     background-color: ${(props) => props.theme["purple-dark"]};
     color: ${(props) => props.theme["white"]};
     border-radius: 8px;
-    padding: 8px;
-  }
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  button:hover {
-    background-color: ${(props) => props.theme["white"]};
-    color: ${(props) => props.theme["purple-dark"]};
-  }
-`;
+    &:hover {
+      background-color: ${(props) => props.theme["white"]};
+      color: ${(props) => props.theme["purple-dark"]};
+    } 
+  `;

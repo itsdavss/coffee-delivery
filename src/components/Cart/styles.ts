@@ -26,7 +26,7 @@ export const CartCard = styled.section`
   align-items: center;
 
   @media (max-width: 1024px) {
-   padding: 30px;
+   padding: 30px 20px;
    margin-bottom: 5%;
   }
 `;
@@ -47,31 +47,9 @@ export const CartItem = styled.div`
     margin-right: 6%;
   }
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 8px;
-
-    button {
-    background-color: ${(props) => props.theme["base-button"]};
-    color: ${(props) => props.theme["base-text"]};
-    font-size: 0.75rem;
-    padding: 6.5px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    border-radius: 4px;
-
-    svg {
-      color: ${(props) => props.theme["purple"]};
-    }
-    }
-  }
-
   h4 {
     color: ${(props) => props.theme["base-text"]};
-    margin-left: 21%;
+    margin-left: 15%;
   }
 
   @media (max-width: 1024px) {
@@ -85,6 +63,34 @@ export const CartItem = styled.div`
       margin-left: 0px;
     }
   }
+`;
+
+export const Buttons = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+
+    div {
+      display: flex;
+      gap: 8px;
+    }
+`;
+
+export const RemoveButton = styled.button`
+    background-color: ${(props) => props.theme["base-button"]};
+    color: ${(props) => props.theme["base-text"]};
+    font-size: 0.75rem;
+    padding: 6.5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+
+    svg {
+      color: ${(props) => props.theme["purple"]};
+      font-size: 1rem;
+    }
 `;
 
 export const OrderSummary = styled.div`
