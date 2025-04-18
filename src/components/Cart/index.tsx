@@ -12,9 +12,22 @@ import tradicional from "../../assets/images/expresso-tradicional.png";
 import { Trash } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import SetQuantityButton from "../../utils/setQuantityButton";
+import { useState } from "react";
 
 export default function () {
   const navigate = useNavigate();
+
+  const [coffeeQuantity, setCoffeeQuantity] = useState(0);
+
+  const increment = () => {
+    setCoffeeQuantity(coffeeQuantity + 1);
+  };
+
+  const decrement = () => {
+    {
+      coffeeQuantity > 0 && setCoffeeQuantity(coffeeQuantity - 1);
+    }
+  };
 
   return (
     <CartSection>
@@ -26,7 +39,11 @@ export default function () {
             <Buttons>
               <p>Expresso Tradicional</p>
               <div>
-                <SetQuantityButton />
+                <SetQuantityButton
+                  increment={increment}
+                  decrement={decrement}
+                  coffeeQuantity={coffeeQuantity}
+                />
                 <RemoveButton>
                   <Trash />
                   Remover

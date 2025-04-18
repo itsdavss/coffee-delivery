@@ -1,18 +1,12 @@
-import { useState } from "react";
 import { ButtonContainer } from './style'
 
-export default function SetQuantityButton() {
-  const [coffeeQuantity, setCoffeeQuantity] = useState(0);
+interface SetQuantityButtonProps {
+  increment: () => void,
+  decrement: () => void,
+  coffeeQuantity: number,
+} 
 
-  const increment = () => {
-    setCoffeeQuantity(coffeeQuantity + 1);
-  };
-
-  const decrement = () => {
-    {
-      coffeeQuantity > 0 && setCoffeeQuantity(coffeeQuantity - 1);
-    }
-  };
+export default function SetQuantityButton({ increment, decrement, coffeeQuantity}: SetQuantityButtonProps) {
 
   return (
     <ButtonContainer>
