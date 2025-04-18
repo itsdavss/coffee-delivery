@@ -1,5 +1,6 @@
 const products = [
   {
+    id: 1,
     image: 'src/assets/images/expresso-tradicional.png',
     types: ['TRADICIONAL'],
     name: 'Expresso Tradicional',
@@ -7,6 +8,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 2,
     image: 'src/assets/images/expresso-americano.png',
     types: ['TRADICIONAL'],
     name: 'Expresso Americano',
@@ -14,6 +16,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 3,
     image: 'src/assets/images/expresso-cremoso.png',
     types: ['TRADICIONAL'],
     name: 'Expresso Cremoso',
@@ -21,6 +24,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 4,
     image: 'src/assets/images/expresso-gelado.png',
     types: ['TRADICIONAL', 'GELADO'],
     name: 'Expresso Gelado',
@@ -28,6 +32,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 5,
     image: 'src/assets/images/cafe-com-leite.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Café com Leite',
@@ -35,6 +40,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 6,
     image: 'src/assets/images/latte.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Latte',
@@ -42,6 +48,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 7,
     image: 'src/assets/images/capuccino.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Capuccino',
@@ -49,6 +56,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 8,
     image: 'src/assets/images/macchiato.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Macchiato',
@@ -56,6 +64,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 9,
     image: 'src/assets/images/mocaccino.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Mocaccino',
@@ -63,6 +72,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 10,
     image: 'src/assets/images/chocolate-quente.png',
     types: ['ESPECIAL', 'COM LEITE'],
     name: 'Chocolate Quente',
@@ -70,6 +80,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 11,
     image: 'src/assets/images/cubano.png',
     types: ['ESPECIAL', 'ALCOÓLICO', 'GELADO'],
     name: 'Cubano',
@@ -77,6 +88,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 12,
     image: 'src/assets/images/havaiano.png',
     types: ['ESPECIAL'],
     name: 'Havaiano',
@@ -84,6 +96,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 13,
     image: 'src/assets/images/arabe.png',
     types: ['ESPECIAL'],
     name: 'Árabe',
@@ -91,6 +104,7 @@ const products = [
     value: 9.90,
   },
   {
+    id: 14,
     image: 'src/assets/images/irlandes.png',
     types: ['ESPECIAL', 'ALCOÓLICO'],
     name: 'Irlandês',

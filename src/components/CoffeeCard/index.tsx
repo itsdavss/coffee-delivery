@@ -4,6 +4,7 @@ import SetQuantityButton from "../../utils/setQuantityButton";
 import { useState } from "react";
 
 interface CoffeeCardProps {
+  id: number,
   name: string;
   image: string;
   description: string;
@@ -11,7 +12,7 @@ interface CoffeeCardProps {
   types: string[];
 }
 
-export function CoffeeCard({ name, image, description, value, types, }: CoffeeCardProps) {
+export function CoffeeCard({ name, image, description, value, types, id }: CoffeeCardProps) {
   const [coffeeQuantity, setCoffeeQuantity] = useState(0);
 
   const increment = () => {
@@ -25,11 +26,10 @@ export function CoffeeCard({ name, image, description, value, types, }: CoffeeCa
   };
   
   const addItemToCart = () => {
+    console.log(id)
     console.log(name)
     console.log(image)
-    console.log(description)
     console.log(value)
-    console.log(types)
     console.log(coffeeQuantity)
   }
 

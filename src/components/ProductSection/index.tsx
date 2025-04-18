@@ -12,6 +12,8 @@ export function ProductSection() {
         {products.map((product) => {
           return (
             <CoffeeCard
+              key={product.id}
+              id={product.id}
               name={product.name}
               image={product.image}
               description={product.description}
