@@ -27,11 +27,38 @@ export const HeaderInfo = styled.div`
   }
 
   a {
+  position: relative;
   background-color: ${(props) => props.theme["yellow-light"]};
   color: ${(props) => props.theme["yellow-dark"]};
   padding: 8px;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
   }
+
+  span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: ${(props) => props.theme["yellow-dark"]};
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+}
+
 
   a:hover {
   background-color: ${(props) => props.theme["yellow-dark"]};

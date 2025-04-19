@@ -2,6 +2,7 @@ import { ShoppingCart } from "phosphor-react";
 import { BuyArea, BuyButton, Card, Info, Tipo } from "./styles";
 import SetQuantityButton from "../../utils/setQuantityButton";
 import { useState } from "react";
+import { useCart } from "../../contexts/CartContext";
 
 interface CoffeeCardProps {
   id: number,
@@ -14,6 +15,7 @@ interface CoffeeCardProps {
 
 export function CoffeeCard({ name, image, description, value, types, id }: CoffeeCardProps) {
   const [coffeeQuantity, setCoffeeQuantity] = useState(0);
+  const { addToCart } = useCart()
 
   const increment = () => {
     setCoffeeQuantity(coffeeQuantity + 1);
@@ -26,11 +28,10 @@ export function CoffeeCard({ name, image, description, value, types, id }: Coffe
   };
   
   const addItemToCart = () => {
-    console.log(id)
-    console.log(name)
-    console.log(image)
-    console.log(value)
-    console.log(coffeeQuantity)
+    if(coffeeQuantity > 0) {
+      addToCart({id, name, image, value, coffeeQuantity})
+      console.log('item adicionado: ', {id, name, image, value, coffeeQuantity})
+    }
   }
 
   return (

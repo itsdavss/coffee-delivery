@@ -33,6 +33,13 @@ export const CartCard = styled.section`
 
 export const CartItems = styled.div`
   width: 100%;
+
+
+  h6 {
+    color: ${(props) => props.theme["base-title"]};
+    text-align: center;
+    font-size: 1rem;
+  }
 `;
 
 export const CartItem = styled.div`
@@ -117,16 +124,24 @@ export const OrderSummary = styled.div`
 `;
 
 export const ConfirmButton = styled.button`
-    background-color: ${(props) => props.theme["yellow"]};
-    color: ${(props) => props.theme["white"]};
-    width: 100%;
-    padding: 16px 0;
-    font-size: 0.875rem;
-    font-weight: 700;
-    border-radius: 4px;
-    margin-top: 24px;
+  background-color: ${(props) => props.theme["yellow"]};
+  color: ${(props) => props.theme["white"]};
+  width: 100%;
+  padding: 16px 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-top: 24px;
+  transition: background-color 0.2s;
+  cursor: pointer;
 
-    &:hover {
+  &:hover {
     background-color: ${(props) => props.theme["yellow-dark"]};
+  }
+
+  &:disabled {
+    background-color: ${(props) => props.theme["base-button"]};
+    color: ${(props) => props.theme["base-label"]};
+    cursor: not-allowed;
   }
 `;
