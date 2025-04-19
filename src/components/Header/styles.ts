@@ -36,12 +36,6 @@ export const HeaderInfo = styled.div`
   align-items: center;
   justify-content: center;
 
-  .cart-icon {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-
   span {
     position: absolute;
     top: -8px;
