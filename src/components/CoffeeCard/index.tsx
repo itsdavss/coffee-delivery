@@ -30,7 +30,6 @@ export function CoffeeCard({ name, image, description, value, types, id }: Coffe
   const addItemToCart = () => {
     if(coffeeQuantity > 0) {
       addToCart({id, name, image, value, coffeeQuantity})
-      console.log('item adicionado: ', {id, name, image, value, coffeeQuantity})
     }
   }
 

@@ -16,7 +16,7 @@ import { useCart } from "../../contexts/CartContext";
 
 export default function Cart() {
   const navigate = useNavigate();
-  const { cartItems } = useCart();
+  const { cartItems, removeItem } = useCart();
   const [coffeeQuantity, setCoffeeQuantity] = useState(0);
 
   const increment = () => {
@@ -53,7 +53,7 @@ export default function Cart() {
                       decrement={decrement}
                       coffeeQuantity={item.coffeeQuantity}
                     />
-                    <RemoveButton>
+                    <RemoveButton onClick={() => removeItem(item)}>
                       <Trash />
                       Remover
                     </RemoveButton>
