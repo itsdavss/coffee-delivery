@@ -11,21 +11,21 @@ import {
 import { Trash } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import SetQuantityButton from "../../utils/setQuantityButton";
-import { useState } from "react";
 import { useCart } from "../../contexts/CartContext";
 
 export default function Cart() {
   const navigate = useNavigate();
-  const { cartItems, removeItem } = useCart();
-  const [coffeeQuantity, setCoffeeQuantity] = useState(0);
+  const { cartItems, removeItem, updateItemQuantity } = useCart();
 
-  const increment = () => {
-    setCoffeeQuantity(coffeeQuantity + 1);
+  const increment = (item: any) => {
+    updateItemQuantity(item.id, item.coffeeQuantity + 1)
   };
 
-  const decrement = () => {
-    {
-      coffeeQuantity > 0 && setCoffeeQuantity(coffeeQuantity - 1);
+  const decrement = (item: any) => {
+    if(item.coffeeQuantity > 1) {
+      updateItemQuantity(item.id, item.coffeeQuantity - 1)
+    }else {
+      removeItem(item)
     }
   };
 
@@ -49,8 +49,8 @@ export default function Cart() {
                   <p>{item.name}</p>
                   <div>
                     <SetQuantityButton
-                      increment={increment}
-                      decrement={decrement}
+                      increment={() => increment(item)}
+                      decrement={() => decrement(item)}
                       coffeeQuantity={item.coffeeQuantity}
                     />
                     <RemoveButton onClick={() => removeItem(item)}>
