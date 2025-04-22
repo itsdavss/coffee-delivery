@@ -1,10 +1,20 @@
 import { createContext, useContext, ReactNode, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+interface AddressDataType {
+  bairro: string;
+  cep: string;
+  cidade: string;
+  numero: string;
+  pagamento: string;
+  rua: string;
+  uf: string;
+}
+
 interface FormContextType {
   handleSubmitExternal: () => void;
   formRef: React.RefObject<HTMLFormElement | null>;
-  addressData: any;
+  addressData: AddressDataType;
 }
 
 const FormContext = createContext<FormContextType | undefined>(undefined);
@@ -12,20 +22,31 @@ const FormContext = createContext<FormContextType | undefined>(undefined);
 export const FormProvider = ({ children }: { children: ReactNode }) => {
   const formRef = useRef<HTMLFormElement>(null);
   const navigate = useNavigate();
-  const [addressData, setAddressData] = useState<Record<string, FormDataEntryValue>>({});
+  const [addressData, setAddressData] = useState<AddressDataType>({
+    bairro: "",
+    cep: "",
+    cidade: "",
+    numero: "",
+    pagamento: "",
+    rua: "",
+    uf: "",
+  });
 
   const handleSubmitExternal = () => {
     if (formRef.current) {
       const formData = new FormData(formRef.current);
-      const data = Object.fromEntries(formData.entries());
-      console.log(data);
-      setAddressData(data)
-      navigate("/success")
+      const data = Object.fromEntries(formData.entries()) as unknown as AddressDataType;
+      setAddressData(data);
+
+
+      navigate("/success");
     }
   };
 
   return (
-    <FormContext.Provider value={{ handleSubmitExternal, formRef, addressData}}>
+    <FormContext.Provider
+      value={{ handleSubmitExternal, formRef, addressData }}
+    >
       {children}
     </FormContext.Provider>
   );

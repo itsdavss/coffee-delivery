@@ -25,17 +25,17 @@ export default function CompleteOrder() {
             </div>
           </FormInfo>
           <FormInputs>
-            <input type="text" name="CEP" placeholder="CEP" className="tamanho30" />
-            <input type="text" name="Rua"  placeholder="Rua" className="tamanho100" />
-            <input type="text" name="Numero"  placeholder="Número" className="tamanho30" />
+            <input type="text" name="cep" placeholder="CEP" className="tamanho30" />
+            <input type="text" name="rua"  placeholder="Rua" className="tamanho100" />
+            <input type="text" name="numero"  placeholder="Número" className="tamanho30" />
             <input
               type="text"
               placeholder="Complemento"
               className="tamanho63"
             />
-            <input type="text" name="Bairro"  placeholder="Bairro" className="tamanho30" />
-            <input type="text" name="Cidade"  placeholder="Cidade" className="tamanho48" />
-            <input type="text" name="UF"  placeholder="UF" className="tamanho10" />
+            <input type="text" name="bairro"  placeholder="Bairro" className="tamanho30" />
+            <input type="text" name="cidade"  placeholder="Cidade" className="tamanho48" />
+            <input type="text" name="uf"  placeholder="UF" className="tamanho10" />
           </FormInputs>
         </section>
         <section>
@@ -53,7 +53,7 @@ export default function CompleteOrder() {
               type="radio"
               name="pagamento"
               id="credito"
-              value="cartao_credito"
+              value="Cartão de crédito"
               hidden
             />
             <label htmlFor="credito"><CreditCard size={22} /> CARTÃO DE CRÉDITO</label>
@@ -61,7 +61,7 @@ export default function CompleteOrder() {
               type="radio"
               name="pagamento"
               id="debito"
-              value="cartao_debito"
+              value="Cartão de debito"
               hidden
             />
             <label htmlFor="debito"><Bank size={22} /> CARTÃO DE DÉBITO</label>
@@ -69,7 +69,7 @@ export default function CompleteOrder() {
               type="radio"
               name="pagamento"
               id="dinheiro"
-              value="dinheiro"
+              value="Dinheiro"
               hidden
             />
             <label htmlFor="dinheiro"><Money size={22} /> DINHEIRO</label>
