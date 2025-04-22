@@ -1,8 +1,12 @@
 import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
 import entregador from "../../assets/images/entregador.png";
 import { ImageContainer, InfoBox, Information, MainContainer, TextSection } from "./styles";
+import { useForm } from "../../contexts/FormContext";
 
 export default function Success() {
+  const { addressData } = useForm()
+  console.log(addressData)
+
   return (
     <MainContainer>
       <TextSection>
