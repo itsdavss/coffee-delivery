@@ -55,7 +55,7 @@ export default function Cart() {
                     />
                     <RemoveButton onClick={() => removeItem(item)}>
                       <Trash />
-                      Remover
+                      REMOVER
                     </RemoveButton>
                   </div>
                 </Buttons>

@@ -56,7 +56,7 @@ export const CartItem = styled.div`
 
   h4 {
     color: ${(props) => props.theme["base-text"]};
-    margin-left: 15%;
+    margin-left: 13%;
   }
 
   @media (max-width: 1024px) {
@@ -97,6 +97,15 @@ export const RemoveButton = styled.button`
     svg {
       color: ${(props) => props.theme["purple"]};
       font-size: 1rem;
+    }
+
+    &:hover {
+    background-color: ${(props) => props.theme["base-hover"]};
+    color: ${(props) => props.theme["base-subtitle"]};
+
+      svg {
+        color: ${(props) => props.theme["purple-dark"]};
+      }
     }
 `;
 
