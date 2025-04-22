@@ -21,14 +21,17 @@ This project is a website for a fictional coffee shop, where users can browse a 
 
 #### Desktop design
 
-### Initial State
-![](screenshots/Screenshot_1.png)
+### Making an order
+![](screenshots/coffee-delivery-gif.gif)
 
-### Active State
-![](screenshots/Screenshot_3.png)
+### Home
+![](screenshots/home.png)
 
-### History page
-![](screenshots/Screenshot_2.png)
+### Checkout
+![](screenshots/checkout.png)
+
+### Success
+![](screenshots/success.png)
 
 ## How to Run the Project
 
