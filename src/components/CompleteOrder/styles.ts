@@ -40,6 +40,11 @@ export const FormInputs = styled.div`
     padding-left: 12px;
     background-color: ${(props) => props.theme["base-input"]};
     border: 1px solid ${(props) => props.theme["base-button"]};
+
+    &:focus {
+      border-color: ${(props) => props.theme["yellow-dark"]};
+      outline: none;
+    }
   }
 
   input::placeholder {
@@ -128,6 +133,10 @@ export const PaymentInputs = styled.div`
 
     svg {
       color: ${(props) => props.theme["purple"]};
+    }
+
+    &:hover {
+      background-color: ${(props) => props.theme["base-hover"]};
     }
   }
 

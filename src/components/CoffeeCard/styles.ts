@@ -87,7 +87,6 @@ export const BuyButton = styled.button`
     justify-content: center;
 
     &:hover {
-      background-color: ${(props) => props.theme["white"]};
-      color: ${(props) => props.theme["purple-dark"]};
+      background-color: ${(props) => props.theme["purple"]};
     } 
   `;
