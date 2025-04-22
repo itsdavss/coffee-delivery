@@ -17,11 +17,13 @@ interface FormContextType {
   addressData: AddressDataType;
 }
 
+
 const FormContext = createContext<FormContextType | undefined>(undefined);
 
 export const FormProvider = ({ children }: { children: ReactNode }) => {
   const formRef = useRef<HTMLFormElement>(null);
   const navigate = useNavigate();
+
   const [addressData, setAddressData] = useState<AddressDataType>({
     bairro: "",
     cep: "",
@@ -32,20 +34,39 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
     uf: "",
   });
 
+  const isAddressValid = (data: AddressDataType): boolean => {
+    return Object.values(data).every((value) => value.trim() !== "");
+  };
+  
+
   const handleSubmitExternal = () => {
     if (formRef.current) {
       const formData = new FormData(formRef.current);
-      const data = Object.fromEntries(formData.entries()) as unknown as AddressDataType;
-      setAddressData(data);
-
-
+      const data = Object.fromEntries(formData.entries());
+  
+      const address: AddressDataType = {
+        bairro: data.bairro?.toString() || "",
+        cep: data.cep?.toString() || "",
+        cidade: data.cidade?.toString() || "",
+        numero: data.numero?.toString() || "",
+        pagamento: data.pagamento?.toString() || "",
+        rua: data.rua?.toString() || "",
+        uf: data.uf?.toString() || "",
+      };
+  
+      if (!isAddressValid(address)) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+  
+      setAddressData(address);
       navigate("/success");
     }
   };
 
   return (
     <FormContext.Provider
-      value={{ handleSubmitExternal, formRef, addressData }}
+      value={{ handleSubmitExternal, formRef, addressData  }}
     >
       {children}
     </FormContext.Provider>
