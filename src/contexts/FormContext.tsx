@@ -55,7 +55,7 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
       };
   
       if (!isAddressValid(address)) {
-        alert("Por favor, preencha todos os campos.");
+        alert("Por favor, preencha todos os campos obrigatórios.");
         return;
       }
   

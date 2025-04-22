@@ -25,17 +25,17 @@ export default function CompleteOrder() {
             </div>
           </FormInfo>
           <FormInputs>
-            <input type="text" name="cep" placeholder="CEP" className="tamanho30" />
-            <input type="text" name="rua"  placeholder="Rua" className="tamanho100" />
-            <input type="text" name="numero"  placeholder="Número" className="tamanho30" />
+            <input type="text" name="cep" placeholder="CEP*" className="tamanho30" />
+            <input type="text" name="rua"  placeholder="Rua*" className="tamanho100" />
+            <input type="text" name="numero"  placeholder="Número*" className="tamanho30" />
             <input
               type="text"
               placeholder="Complemento"
               className="tamanho63"
             />
-            <input type="text" name="bairro"  placeholder="Bairro" className="tamanho30" />
-            <input type="text" name="cidade"  placeholder="Cidade" className="tamanho48" />
-            <input type="text" name="uf"  placeholder="UF" className="tamanho10" />
+            <input type="text" name="bairro"  placeholder="Bairro*" className="tamanho30" />
+            <input type="text" name="cidade"  placeholder="Cidade*" className="tamanho48" />
+            <input type="text" name="uf"  placeholder="UF*" className="tamanho10" />
           </FormInputs>
         </section>
         <section>
