@@ -7,12 +7,15 @@ import {
   PaymentInfo,
   PaymentInputs,
 } from "./styles";
+import { useForm } from "../../contexts/FormContext";
 
 export default function CompleteOrder() {
+   const { formRef } = useForm()
+
   return (
     <ContainerSection>
       <h1>Complete seu pedido</h1>
-      <Form action="">
+      <Form ref={formRef}>
         <section>
           <FormInfo>
             <MapPinLine size={22} />
@@ -22,17 +25,17 @@ export default function CompleteOrder() {
             </div>
           </FormInfo>
           <FormInputs>
-            <input type="text" placeholder="CEP" className="tamanho30" />
-            <input type="text" placeholder="Rua" className="tamanho100" />
-            <input type="text" placeholder="Número" className="tamanho30" />
+            <input type="text" name="CEP" placeholder="CEP" className="tamanho30" />
+            <input type="text" name="Rua"  placeholder="Rua" className="tamanho100" />
+            <input type="text" name="Numero"  placeholder="Número" className="tamanho30" />
             <input
               type="text"
               placeholder="Complemento"
               className="tamanho63"
             />
-            <input type="text" placeholder="Bairro" className="tamanho30" />
-            <input type="text" placeholder="Cidade" className="tamanho48" />
-            <input type="text" placeholder="UF" className="tamanho10" />
+            <input type="text" name="Bairro"  placeholder="Bairro" className="tamanho30" />
+            <input type="text" name="Cidade"  placeholder="Cidade" className="tamanho48" />
+            <input type="text" name="UF"  placeholder="UF" className="tamanho10" />
           </FormInputs>
         </section>
         <section>
