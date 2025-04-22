@@ -10,7 +10,7 @@ import {
 import { useForm } from "../../contexts/FormContext";
 
 export default function CompleteOrder() {
-   const { formRef } = useForm()
+   const { formRef, handleCepSearch, addressData } = useForm()
 
   return (
     <ContainerSection>
@@ -25,17 +25,17 @@ export default function CompleteOrder() {
             </div>
           </FormInfo>
           <FormInputs>
-            <input type="text" name="cep" placeholder="CEP*" className="tamanho30" />
-            <input type="text" name="rua"  placeholder="Rua*" className="tamanho100" />
-            <input type="text" name="numero"  placeholder="Número*" className="tamanho30" />
+            <input type="text" name="cep" placeholder="CEP*" onChange={handleCepSearch} className="tamanho30" />
+            <input type="text" name="rua" value={addressData.rua}  placeholder="Rua*" className="tamanho100" readOnly  />
+            <input type="text" name="numero" placeholder="Número*" className="tamanho30" />
             <input
               type="text"
               placeholder="Complemento"
               className="tamanho63"
             />
-            <input type="text" name="bairro"  placeholder="Bairro*" className="tamanho30" />
-            <input type="text" name="cidade"  placeholder="Cidade*" className="tamanho48" />
-            <input type="text" name="uf"  placeholder="UF*" className="tamanho10" />
+            <input type="text" name="bairro" value={addressData.bairro}  placeholder="Bairro*" className="tamanho30" readOnly />
+            <input type="text" name="cidade" value={addressData.cidade}  placeholder="Cidade*" className="tamanho48" readOnly  />
+            <input type="text" name="uf" value={addressData.uf}  placeholder="UF*" className="tamanho10" readOnly  />
           </FormInputs>
         </section>
         <section>

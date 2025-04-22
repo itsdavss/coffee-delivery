@@ -12,11 +12,11 @@ interface AddressDataType {
 }
 
 interface FormContextType {
+  handleCepSearch: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmitExternal: () => void;
   formRef: React.RefObject<HTMLFormElement | null>;
   addressData: AddressDataType;
 }
-
 
 const FormContext = createContext<FormContextType | undefined>(undefined);
 
@@ -43,7 +43,7 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
     if (formRef.current) {
       const formData = new FormData(formRef.current);
       const data = Object.fromEntries(formData.entries());
-  
+
       const address: AddressDataType = {
         bairro: data.bairro?.toString() || "",
         cep: data.cep?.toString() || "",
@@ -53,20 +53,41 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
         rua: data.rua?.toString() || "",
         uf: data.uf?.toString() || "",
       };
-  
+
       if (!isAddressValid(address)) {
         alert("Por favor, preencha todos os campos obrigatórios.");
         return;
       }
-  
+
       setAddressData(address);
       navigate("/success");
     }
   };
 
+  const handleCepSearch = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const cep = e.target.value;
+
+    if(cep.length < 8) return;
+
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+      const data = await response.json();
+      setAddressData((prev) => ({
+        ...prev,
+        cep: data.cep,
+        rua: data.logradouro,
+        bairro: data.bairro,
+        cidade: data.localidade,
+        uf: data.uf,
+      }));
+    } catch (error) {
+      console.error("Erro ao buscar CEP:", error);
+    }
+  };
+
   return (
     <FormContext.Provider
-      value={{ handleSubmitExternal, formRef, addressData  }}
+      value={{ handleSubmitExternal, formRef, addressData, handleCepSearch }}
     >
       {children}
     </FormContext.Provider>
