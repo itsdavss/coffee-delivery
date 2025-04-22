@@ -26,7 +26,7 @@ export const CartCard = styled.section`
   align-items: center;
 
   @media (max-width: 1024px) {
-   padding: 30px 20px;
+   padding: 30px 15px;
    margin-bottom: 5%;
   }
 `;
@@ -100,12 +100,12 @@ export const RemoveButton = styled.button`
     }
 
     &:hover {
-      background-color: ${(props) => props.theme["base-hover"]};
-      color: ${(props) => props.theme["base-subtitle"]};
+    background-color: ${(props) => props.theme["base-hover"]};
+    color: ${(props) => props.theme["base-subtitle"]};
 
-        svg {
-          color: ${(props) => props.theme["purple-dark"]};
-        }
+      svg {
+        color: ${(props) => props.theme["purple-dark"]};
+      }
     }
 `;
 

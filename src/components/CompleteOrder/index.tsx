@@ -7,12 +7,15 @@ import {
   PaymentInfo,
   PaymentInputs,
 } from "./styles";
+import { useForm } from "../../contexts/FormContext";
 
 export default function CompleteOrder() {
+   const { formRef, handleCepSearch, addressData } = useForm()
+
   return (
     <ContainerSection>
       <h1>Complete seu pedido</h1>
-      <Form action="">
+      <Form ref={formRef}>
         <section>
           <FormInfo>
             <MapPinLine size={22} />
@@ -22,17 +25,17 @@ export default function CompleteOrder() {
             </div>
           </FormInfo>
           <FormInputs>
-            <input type="text" placeholder="CEP" className="tamanho30" />
-            <input type="text" placeholder="Rua" className="tamanho100" />
-            <input type="text" placeholder="Número" className="tamanho30" />
+            <input type="text" name="cep" placeholder="CEP*" onChange={handleCepSearch} className="tamanho30" />
+            <input type="text" name="rua" value={addressData.rua}  placeholder="Rua*" className="tamanho100" readOnly  />
+            <input type="text" name="numero" placeholder="Número*" className="tamanho30" />
             <input
               type="text"
               placeholder="Complemento"
               className="tamanho63"
             />
-            <input type="text" placeholder="Bairro" className="tamanho30" />
-            <input type="text" placeholder="Cidade" className="tamanho48" />
-            <input type="text" placeholder="UF" className="tamanho10" />
+            <input type="text" name="bairro" value={addressData.bairro}  placeholder="Bairro*" className="tamanho30" readOnly />
+            <input type="text" name="cidade" value={addressData.cidade}  placeholder="Cidade*" className="tamanho48" readOnly  />
+            <input type="text" name="uf" value={addressData.uf}  placeholder="UF*" className="tamanho10" readOnly  />
           </FormInputs>
         </section>
         <section>
@@ -50,7 +53,7 @@ export default function CompleteOrder() {
               type="radio"
               name="pagamento"
               id="credito"
-              value="cartao_credito"
+              value="Cartão de crédito"
               hidden
             />
             <label htmlFor="credito"><CreditCard size={22} /> CARTÃO DE CRÉDITO</label>
@@ -58,7 +61,7 @@ export default function CompleteOrder() {
               type="radio"
               name="pagamento"
               id="debito"
-              value="cartao_debito"
+              value="Cartão de debito"
               hidden
             />
             <label htmlFor="debito"><Bank size={22} /> CARTÃO DE DÉBITO</label>
@@ -66,7 +69,7 @@ export default function CompleteOrder() {
               type="radio"
               name="pagamento"
               id="dinheiro"
-              value="dinheiro"
+              value="Dinheiro"
               hidden
             />
             <label htmlFor="dinheiro"><Money size={22} /> DINHEIRO</label>

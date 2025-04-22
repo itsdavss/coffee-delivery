@@ -1,8 +1,11 @@
 import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
 import entregador from "../../assets/images/entregador.png";
 import { ImageContainer, InfoBox, Information, MainContainer, TextSection } from "./styles";
+import { useForm } from "../../contexts/FormContext";
 
 export default function Success() {
+  const { addressData } = useForm()
+
   return (
     <MainContainer>
       <TextSection>
@@ -15,9 +18,9 @@ export default function Success() {
             <MapPin size={16} className="pin" />
             <div>
               <p>
-                Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
+                Entrega em <strong>{addressData.rua}, {addressData.numero}</strong>
               </p>
-              <p>Farrapos - Porto Alegre, RS</p>
+              <p>{addressData.bairro} - {addressData.cidade}, {addressData.uf}</p>
             </div>
           </Information>
           <Information>
@@ -33,7 +36,7 @@ export default function Success() {
             <CurrencyDollar size={16} className="dollar" />
             <div>
               <p>Pagamento na entrega</p>
-              <p><strong>Cartão de crédito</strong></p>
+              <p><strong>{addressData.pagamento}</strong></p>
             </div>
           </Information>
         </InfoBox>

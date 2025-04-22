@@ -5,8 +5,8 @@ import { MainContainer } from "./styles";
 export default function Checkout() {
   return (
     <MainContainer>
-      <CompleteOrder />
-      <Cart />
+        <CompleteOrder />
+        <Cart />
     </MainContainer>
   );
 }

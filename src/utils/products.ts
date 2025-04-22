@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    image: 'src/assets/images/expresso-tradicional.png',
+    image: 'assets/images/expresso-tradicional.png',
     types: ['TRADICIONAL'],
     name: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
@@ -9,7 +9,7 @@ const products = [
   },
   {
     id: 2,
-    image: 'src/assets/images/expresso-americano.png',
+    image: 'assets/images/expresso-americano.png',
     types: ['TRADICIONAL'],
     name: 'Expresso Americano',
     description: 'Expresso diluído, menos intenso que o tradicional',
@@ -17,7 +17,7 @@ const products = [
   },
   {
     id: 3,
-    image: 'src/assets/images/expresso-cremoso.png',
+    image: 'assets/images/expresso-cremoso.png',
     types: ['TRADICIONAL'],
     name: 'Expresso Cremoso',
     description: 'Café expresso tradicional com espuma cremosa',
@@ -25,7 +25,7 @@ const products = [
   },
   {
     id: 4,
-    image: 'src/assets/images/expresso-gelado.png',
+    image: 'assets/images/expresso-gelado.png',
     types: ['TRADICIONAL', 'GELADO'],
     name: 'Expresso Gelado',
     description: 'Bebida preparada com café expresso e cubos de gelo',
@@ -33,7 +33,7 @@ const products = [
   },
   {
     id: 5,
-    image: 'src/assets/images/cafe-com-leite.png',
+    image: 'assets/images/cafe-com-leite.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Café com Leite',
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
@@ -41,7 +41,7 @@ const products = [
   },
   {
     id: 6,
-    image: 'src/assets/images/latte.png',
+    image: 'assets/images/latte.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Latte',
     description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
@@ -49,7 +49,7 @@ const products = [
   },
   {
     id: 7,
-    image: 'src/assets/images/capuccino.png',
+    image: 'assets/images/capuccino.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Capuccino',
     description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
@@ -57,7 +57,7 @@ const products = [
   },
   {
     id: 8,
-    image: 'src/assets/images/macchiato.png',
+    image: 'assets/images/macchiato.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Macchiato',
     description: 'Café expresso misturado com um pouco de leite quente e espuma',
@@ -65,7 +65,7 @@ const products = [
   },
   {
     id: 9,
-    image: 'src/assets/images/mocaccino.png',
+    image: 'assets/images/mocaccino.png',
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Mocaccino',
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
@@ -73,7 +73,7 @@ const products = [
   },
   {
     id: 10,
-    image: 'src/assets/images/chocolate-quente.png',
+    image: 'assets/images/chocolate-quente.png',
     types: ['ESPECIAL', 'COM LEITE'],
     name: 'Chocolate Quente',
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
@@ -81,7 +81,7 @@ const products = [
   },
   {
     id: 11,
-    image: 'src/assets/images/cubano.png',
+    image: 'assets/images/cubano.png',
     types: ['ESPECIAL', 'ALCOÓLICO', 'GELADO'],
     name: 'Cubano',
     description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
@@ -89,7 +89,7 @@ const products = [
   },
   {
     id: 12,
-    image: 'src/assets/images/havaiano.png',
+    image: 'assets/images/havaiano.png',
     types: ['ESPECIAL'],
     name: 'Havaiano',
     description: 'Bebida adocicada preparada com café e leite de coco',
@@ -97,7 +97,7 @@ const products = [
   },
   {
     id: 13,
-    image: 'src/assets/images/arabe.png',
+    image: 'assets/images/arabe.png',
     types: ['ESPECIAL'],
     name: 'Árabe',
     description: 'Bebida preparada com grãos de café árabe e especiarias',
@@ -105,7 +105,7 @@ const products = [
   },
   {
     id: 14,
-    image: 'src/assets/images/irlandes.png',
+    image: 'assets/images/irlandes.png',
     types: ['ESPECIAL', 'ALCOÓLICO'],
     name: 'Irlandês',
     description: 'Bebida à base de café, uísque irlandês, açúcar e chantilly',

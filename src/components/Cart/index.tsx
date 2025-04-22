@@ -9,23 +9,23 @@ import {
   RemoveButton,
 } from "./styles";
 import { Trash } from "phosphor-react";
-import { useNavigate } from "react-router-dom";
 import SetQuantityButton from "../../utils/setQuantityButton";
 import { useCart } from "../../contexts/CartContext";
+import { useForm } from "../../contexts/FormContext";
 
 export default function Cart() {
-  const navigate = useNavigate();
+  const { handleSubmitExternal } = useForm();
   const { cartItems, removeItem, updateItemQuantity } = useCart();
 
   const increment = (item: any) => {
-    updateItemQuantity(item.id, item.coffeeQuantity + 1)
+    updateItemQuantity(item.id, item.coffeeQuantity + 1);
   };
 
   const decrement = (item: any) => {
-    if(item.coffeeQuantity > 1) {
-      updateItemQuantity(item.id, item.coffeeQuantity - 1)
-    }else {
-      removeItem(item)
+    if (item.coffeeQuantity > 1) {
+      updateItemQuantity(item.id, item.coffeeQuantity - 1);
+    } else {
+      removeItem(item);
     }
   };
 
@@ -82,11 +82,8 @@ export default function Cart() {
             </div>
           </OrderSummary>
         )}
-
         <ConfirmButton
-          onClick={() => {
-            navigate("/success");
-          }}
+          onClick={handleSubmitExternal}
           disabled={cartItems.length == 0 ? true : false}
         >
           CONFIRMAR PEDIDO

@@ -1,54 +1,70 @@
-# React + TypeScript + Vite
+# Ignite Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This was the practical challenge developed in Level 02 of Rocketseat's React course.
 
-Currently, two official plugins are available:
+## [View the project here](https://coffee-delivery-iota-seven.vercel.app/) ##
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of contents
 
-## Expanding the ESLint configuration
+- [Overview](#overview)
+  - [Screenshots](#screenshots)
+- [How to Run the Project](#how-to-run-the-project)
+- [My process](#my-process)
+  - [Developed with](#developed-with)
+- [Author](#author)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Overview
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+This project is a website for a fictional coffee shop, where users can browse a list of available coffees, choose their desired products, set the quantity, and proceed to checkout. During the checkout process, users enter their delivery address and select a payment method.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Screenshots
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### Desktop design
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Initial State
+![](screenshots/Screenshot_1.png)
+
+### Active State
+![](screenshots/Screenshot_3.png)
+
+### History page
+![](screenshots/Screenshot_2.png)
+
+## How to Run the Project
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone "https://github.com/itsdavss/coffee-delivery"
+
+2. Navigate to the project folder:
+   ```bash
+   cd coffee-delivery
+
+3. Install the dependencies:
+   ```bash
+   npm install
+
+4. Start the development server:
+   ```bash
+   npm run dev
+
+## My process
+
+During the development of this project, I had the opportunity to practice and enhance my TypeScript skills, deepening my understanding of type systems. I also worked with key React concepts such as state management, Context API, state immutability, lists and keys in ReactJS, props, and componentization. Additionally, I took the initiative to implement extra features, including address auto-fill via an API and a custom alert for users who attempt to select an address outside the city of São Paulo, among other improvements.
+
+## Developed with
+
+- Typescript 
+- React
+- Styled Components
+- Contexts
+- API
+- React Router DOM
+- Reducer
+
+## Author
+
+- GitHub - [itsdavss](https://github.com/itsdavss)
+- My portfolio - [Davi Oliveira](https://itsdavss.github.io/portfolio-davi/)
