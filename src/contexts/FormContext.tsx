@@ -1,5 +1,6 @@
 import { createContext, useContext, ReactNode, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 interface AddressDataType {
   bairro: string;
@@ -72,6 +73,16 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
     try {
       const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
       const data = await response.json();
+      if(data.localidade != 'São Paulo') {
+        Swal.fire({
+          title: "Fora da área de entrega!",
+          text: "Atualmente, realizamos entregas apenas dentro da cidade de São Paulo. Por favor, revise o endereço.",
+          icon: "error",
+        });
+        
+
+        return
+      }
       setAddressData((prev) => ({
         ...prev,
         cep: data.cep,
