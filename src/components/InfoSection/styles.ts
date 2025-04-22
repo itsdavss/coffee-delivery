@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Background from "../../assets/images/Background.png";
+import Background from "../../../public/assets/images/Background.png";
 
 export const Section = styled.section`
   background-image: url(${Background});
