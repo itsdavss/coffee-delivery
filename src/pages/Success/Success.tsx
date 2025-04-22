@@ -1,5 +1,5 @@
 import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
-import entregador from "../../../public/assets/images/entregador.png";
+import entregador from "../../assets/images/entregador.png";
 import { ImageContainer, InfoBox, Information, MainContainer, TextSection } from "./styles";
 import { useForm } from "../../contexts/FormContext";
 

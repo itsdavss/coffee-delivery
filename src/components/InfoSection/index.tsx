@@ -1,5 +1,5 @@
 import { Section, TextArea } from "./styles";
-import imagemCafe from "../../../public/assets/images/café.png";
+import imagemCafe from "../../assets/images/café.png";
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 
 export function InfoSection() {
