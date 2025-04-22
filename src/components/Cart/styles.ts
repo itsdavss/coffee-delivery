@@ -26,7 +26,7 @@ export const CartCard = styled.section`
   align-items: center;
 
   @media (max-width: 1024px) {
-   padding: 30px 20px;
+   padding: 30px 15px;
    margin-bottom: 5%;
   }
 `;
