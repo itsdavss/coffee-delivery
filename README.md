@@ -19,8 +19,6 @@ This project is a website for a fictional coffee shop, where users can browse a 
 
 ### Screenshots
 
-#### Desktop design
-
 ### Making an order
 ![](screenshots/coffee-delivery-gif.gif)
 
